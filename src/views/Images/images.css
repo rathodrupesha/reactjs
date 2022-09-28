@@ -1,0 +1,10 @@
+.slider-image {
+  height: auto;
+  width: 300px;
+  max-height: 200px !important;
+}
+.main-image{
+  height:auto ;
+  width: 400px;
+  max-height: 200px !important;
+}

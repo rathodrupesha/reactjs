@@ -1,0 +1,16 @@
+include:
+  remote: 'https://${CI_SERVER_HOST}/public-resources/gitlab-ci/-/raw/master/templates/build.yaml'
+stages:
+  - build
+  - deploy
+variables:
+  NGINX_PATH: "/home/ubuntu/docker-stack/nginx_conf/react"
+  PROJECT: "hamrostay-super-admin"
+build: 
+  stage: build
+  extends: .build_static 
+deploy:
+  stage: deploy
+  extends: .deploy_static
+  only:
+  - development
